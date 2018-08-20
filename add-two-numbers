@@ -1,0 +1,40 @@
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
+ */
+var addTwoNumbers = function(l1, l2) {
+  var l1node = l1;
+  var l2node = l2;
+  var list1 = [];
+  var list2 = [];
+  var sumArr = [];
+  var carryOver = 0;
+  while (l1node) {
+    list1.push(l1node.val);
+    l1node = l1node.next;
+  }
+  while(l2node) {
+    list2.push(l2node.val);
+    l2node = l2node.next;
+  }
+  if (list1.length > list2.length) {
+    
+  } else if (list2.length > list1.length) {
+    
+  } else {
+    for (var i = 0; i < list1.length; i++ ) {
+      if (list1[i] + list2[i] > 9) {
+        var sumedOver = String(list1[i] + list2[i]);
+        sumArr.push(Number(sumedOver[1]));
+        var carryOver = sumedOver[0];
+      } else {
+        sumArr.push(list1[i] + list2[i] + Number(carryOver));
+        carryOver = 0;
+      }
+    }
+  }
+  
+};
