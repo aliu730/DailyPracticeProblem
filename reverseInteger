@@ -1,0 +1,17 @@
+var reverse = function(x) {
+  if (x < 0) {
+    x = x * -1;
+    var numString = String(x).split("").reverse().join("");
+    if (Number(numString) > 2**31) {
+      return 0;
+    }
+    return Number(numString) * -1;
+    
+  } else {
+    var numString = String(x).split("").reverse().join("");
+    if (Number(numString) > 2**31) {
+      return 0;
+    }
+    return Number(numString);
+  }
+};
