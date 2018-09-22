@@ -22,3 +22,5 @@ var romanToInt = function(s) {
   }
   return currTotal;
 };
+
+console.log('workinh');
